@@ -38,6 +38,9 @@ function mascara(i){
             <li><a href="#app">App E-MED</a></li> &nbsp;
             <li><a href="#contato">Contato</a></li> &nbsp;
             <li><a href="#cadastro">Cadastre-se</a></li> &nbsp;
+            <li> <a href='#login'>Login:</a><input style="width: 100px; height: 22px;" type="login" name="login" id="login" /></li>
+            <li> <a href='#senha'>Senha:</a><input style="width: 100px; height: 22px;" type="password" name="password" id="password" /></li>
+            <li> <a href="#submit"><button type="submit" style="">Entrar</button></a></li>
         </ul>
     </center>
     </nav>
@@ -69,12 +72,13 @@ function mascara(i){
                 <font size="6" style="color:#01a0c4"><b>Sobre a E-Med: </b></font>
                 <br />
                 <br />
-                
+            <img src="img/sobre.jpg" width="auto" height="auto" style="float: left;">    
                 <h2>
 
                     Somos uma empresa com a proposta de implementar um aplicativo para dispositivos móveis, que auxilie na área da saúde ao combate da COVID-19, esta proposta se chama E-MED. Sua finalidade é realizar a conexão direta entre médico/paciente, mantendo o distanciamento social e prestando serviços essenciais aos pacientes como, Consultas, acompanhamento e possível prescrição de medicamentos.
             
                 </h2>
+
             </center>
         </section>
         
@@ -86,9 +90,11 @@ function mascara(i){
             <center>
                 <font size="6" style="color:#01a0c4"><b>O que fazemos: </b></font>
                 <br /><br />
+                <img src="img/telemedicina.png" width="auto" height=450px" style="float: left;"> 
                 <h2>
                     A E-med tem como objetivo oferecer um aplicativo para Smartphone que proporciona um atendimento médico à distância voltado ao combate do vírus da covid-19, por meio da telemedicina. Isso tudo é feito acessando um app desenvolvido para a E-med, o uso se da com o paciente cadastrado no sistema, após isso é feito um questionário sobre sintomas e se a pessoa teve contato com alguém testado positivo para COVID-19. Após essa triagem o paciente pode escolher os recursos que são disponibilizados no aplicativo, que são, consulta médica (tanto virtual como presencial, essa no caso do médico solicitar) geração de receita, diagnostico. Com isso é possível ter um atendimento médico sem precisar sair de casa e evitando o risco de contaminação e a diminuição de aglomerações, pois não será mais necessário ir a um hospital realizar testes ou consultas, somente se após uma primeira avaliação o médico solicitar a presença em um centro médico.
                 </h2>
+
             </center>
         </section>
     </div>
@@ -103,9 +109,15 @@ function mascara(i){
                         Ao baixar o App E-Med, você tem acesso a diversos serviços e informações de forma prática e facil além de poder agendar consultas e realizar atendimentos online, onde você estiver, por meio dos serviços de telemedicina<br />
                     </h2>
                 </center>
-                <center><img src="img/login.jpg" width="500" height="400"></center>
+                <center>
+                        <img src="img/login.jpg" width="500" height="400">
+                        <img src="img/qrcode.png" width="400" height="auto" style="padding-bottom: 150px;">
+                </center>
+                
                 <br /> <br />
                 <center><font size="6" style="color:#01a0c4"><b>Baixe agora o aplicativo!</b></font></center>
+               <br />
+                
 
 
         </section>
@@ -115,8 +127,11 @@ function mascara(i){
     <div style= "border-bottom:1px solid #032228; padding:10px;">
         
         <section id="contato">
-                <center><font size="6" style="color:#01a0c4"><b>Contato: </b></font>
+                <center><font size="6" style="color:#01a0c4"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contato: </b></font>
                     <br /><br />
+
+                    <img src="img/home.png" width="auto" height="300px" style="float: right;">
+                    <img src="img/cel.png" width="auto" height="300px" style="float: left;">  
                     <h2>    
                         Telefone (19) 3232-1919<br />
                         Whatsapp +55 (19) 99999-0001<br />
@@ -128,7 +143,7 @@ function mascara(i){
                     <br />
       
                 <ul >
-                <li><a href="#chatVirtual" style="padding-right: 30px;">Clique aqui para iniciar chat virtual</a></li> &nbsp;
+                <li><a href="https://unisal.br/" target="_blank" style="padding-right: 30px;"><h3>Clique aqui para iniciar chat virtual</h3></a></li> &nbsp;
                 </ul>
             </center>
 
@@ -152,7 +167,7 @@ function mascara(i){
 
                 <div>
                     <label for="email">E-mail:</label>
-                        <input type="email" id="email" />
+                        <input type="email" id="email"/>
                 </div>
 
                 <div>
@@ -162,19 +177,30 @@ function mascara(i){
 
                 <div>
                     <label for="data">Data Nascimento:</label>
-                        <input type="date" id="date" />
+                        <input type="date" id="date"/>
                 </div>
 
-                <div>
-                    <label for="sexo">Sexo:</label>
-                        <select name="select">
+            <div class="sradio">
+                              
+                <label for="sexo">Sexo:</label>
+
+                    <!--<label for="masc">Masculino</label>
+                        <input type="radio" id="masc" name="sexo" value="masc" />
+                    <label for="fem">Feminino</label>                               
+                        <input type="radio" id="fem" name="sexo" value="fem" />
+                    <label for="pnd">Indefinido</label>        
+                        <input type="radio" id="pnd" name="sexo" value="pnd" />-->
+                            
+                        
+
+                         <select name="select">
                             <option value="vazio"selected>
                             ------------------------- SELECIONE -------------------------</option>
                             <option value="fem">Feminino</option>
                             <option value="masc">Masculino</option>
-                            <option value="pnd">Prefiro não dizer</option>
-                        </select>
-                </div>
+                            <option value="pnd">Indefinido</option>
+                        </select> 
+            </div>
 
                 <div>
                     <label for="usuario">Cadastre um nome de usuário:</label>
@@ -186,7 +212,7 @@ function mascara(i){
                         <input type="password" id="password" />
                 </div>
                 <div class="button">
-                    <button type="submit" style="margin-left: 430px;">Finalizar</button>
+                    <button type="submit" style="margin-left: 400px;">Finalizar</button>
                 </div>
                 </form>
             </center>
