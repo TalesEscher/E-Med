@@ -1,240 +1,102 @@
-<html>
+<script>
+    function pulaLinha() {
 
-<meta charset="utf-8">
+        document.write("<br>");
+    }
 
-<head>
+    function mostra(frase) {
 
-<link rel="stylesheet" type="text/css" href="style.css" />
+        document.write(frase);
+        pulaLinha();
+    }
 
+    var loginCadastrado = "root";
+    var senhaCadastrada = "root";
+
+    var tentativas = 1;
+
+    while (tentativas <= 3) {
+
+         loginInformado = prompt("Informe seu login");
+         senhaInformada = prompt("Informe sua senha");
+
+
+         if( loginCadastrado == loginInformado && senhaCadastrada == senhaInformada ) {
+
+                mostra("Bem-vindo ao sistema " + loginInformado);
+
+            if (tentativas = 3) {
+
+                    tentativas++;
+
+            }
+
+            } else {
+
+            alert("Login inválido. Tente novamente");
+            tentativas++;
+
+        }
+
+
+    }
+
+         alert("Login inválido");    
+
+</script>
 <script type="text/javascript">
-function mascara(i){
-   
-   var v = i.value;
-   
-   if(isNaN(v[v.length-1])){ // impede entrar outro caractere que não seja número
-      i.value = v.substring(0, v.length-1);
-      return;
-   }
-   
-   i.setAttribute("maxlength", "14");
-   if (v.length == 3 || v.length == 7) i.value += ".";
-   if (v.length == 11) i.value += "-";
+    
+
+function pulaLinha() {
+
+    document.write("<br>");
+}
+
+function mostra(frase) {
+
+    document.write(frase);
+    pulaLinha();
+}
+
+var loginCadastrado = "alura";
+var senhaCadastrada = "alura321";
+
+var tentativas = 1;
+
+while (tentativas <= 3) {
+
+     loginInformado = prompt("Informe seu login");
+     senhaInformada = prompt("Informe sua senha");
+
+
+    if( loginCadastrado == loginInformado && senhaCadastrada == senhaInformada ) {
+
+        mostra("Bem-vindo ao sistema " + loginInformado);
+
+        // Não entendi o motivo deste if abaixo
+        // if (tentativas = 3) { // Esse if está fazendo uma atribuição onde testa se tentativas recebeu o valor de 3
+        //     tentativas++; // Porque está incrementando se o login foi um sucesso?
+        // }
+
+        break; // Para sair do loop
+
+    } else {
+
+        alert("Login inválido. Tente novamente");
+        tentativas++;
+
+    }
+
 
 }
 
-</script>
+// alert("Login inválido"); -- Este item seria executado independente do resultado.COPIAR CÓDIGO
 
-<title>E-MED</title>
-
-</head>
-
-
-<header>
-    <nav id="menu">
-    <center>
-        <ul style= "border-top:2px solid #032228; border-bottom:2px solid #032228; padding:10px;" >
-            <li><a href="#sobre">Sobre a E-MED</a></li> &nbsp;
-            <li><a href="#fazemos">O que fazemos</a></li> &nbsp;
-            <li><a href="#app">App E-MED</a></li> &nbsp;
-            <li><a href="#contato">Contato</a></li> &nbsp;
-            <li><a href="#cadastro">Cadastre-se</a></li> &nbsp;
-            <li> <a href='#login'>Login:</a><input style="width: 100px; height: 22px;" type="login" name="login" id="login" /></li>
-            <li> <a href='#senha'>Senha:</a><input style="width: 100px; height: 22px;" type="password" name="password" id="password" /></li>
-            <li> <a href="#submit"><button type="submit" style="">Entrar</button></a></li>
-        </ul>
-    </center>
-    </nav>
-</header>
-
-
-<body>
-
-
-
-    <div id="banner" style="padding:40px; " style="width: auto; height: auto">
-
-    <center><img src="img/bg.png">
-
-            <div id="borda_texto">
-                <h1><b>E-Med - Saúde à um clique</b></h1>
-            </div>
-    </center>
-
-    </div>    
-    
-   
-
-    
-    <div style= "border-top:1px solid #032228; border-bottom:1px solid #032228; padding:10px; padding-bottom: 70px;!important">
-        <section id="sobre">
-        
-            <center>
-                <font size="6" style="color:#01a0c4"><b>Sobre a E-Med: </b></font>
-                <br />
-                <br />
-            <img src="img/sobre.jpg" width="auto" height="20%" style="float: left;">    
-                <h2>
-
-                    Somos uma empresa com a proposta de implementar um aplicativo para dispositivos móveis, que auxilie na área da saúde ao combate da COVID-19, esta proposta se chama E-MED. Sua finalidade é realizar a conexão direta entre médico/paciente, mantendo o distanciamento social e prestando serviços essenciais aos pacientes como, Consultas, acompanhamento e possível prescrição de medicamentos.
-            
-                </h2>
-
-            </center>
-        </section>
-        
-    </div>
-
-    <div style= "border-bottom:1px solid #032228; padding:60px;">    
-        <section id="fazemos">
-
-            <center>
-                <font size="6" style="color:#01a0c4"><b>O que fazemos: </b></font>
-                <br /><br />
-                <img src="img/telemedicina.png" width="auto" height="30%" style="float: left;"> 
-                <h2>
-                    A E-med tem como objetivo oferecer um aplicativo para Smartphone que proporciona um atendimento médico à distância voltado ao combate do vírus da covid-19, por meio da telemedicina. Isso tudo é feito acessando um app desenvolvido para a E-med, o uso se da com o paciente cadastrado no sistema, após isso é feito um questionário sobre sintomas e se a pessoa teve contato com alguém testado positivo para COVID-19. Após essa triagem o paciente pode escolher os recursos que são disponibilizados no aplicativo, que são, consulta médica (tanto virtual como presencial, essa no caso do médico solicitar) geração de receita, diagnostico. Com isso é possível ter um atendimento médico sem precisar sair de casa e evitando o risco de contaminação e a diminuição de aglomerações, pois não será mais necessário ir a um hospital realizar testes ou consultas, somente se após uma primeira avaliação o médico solicitar a presença em um centro médico.
-                </h2>
-
-            </center>
-        </section>
-    </div>
-        
-    <div style= "border-bottom:1px solid #032228; padding:10px;">
-        
-        <section id="app">
-                <center>
-                    <font size="6" style="color:#01a0c4"><b>App E-Med: </b></font>
-                    <br /><br />
-                    <h2>
-                        Ao baixar o App E-Med, você tem acesso a diversos serviços e informações de forma prática e facil além de poder agendar consultas e realizar atendimentos online, onde você estiver, por meio dos serviços de telemedicina<br />
-                    </h2>
-                </center>
-                <center>
-                        <img src="img/login.jpg" width="500" height="400">
-                        <img src="img/qrcode.png" width="400" height="auto" style="padding-bottom: 150px;">
-                </center>
-                
-                <br /> <br />
-                <center><font size="6" style="color:#01a0c4"><b>Baixe agora o aplicativo!</b></font></center>
-               <br />
-                
-
-
-        </section>
-        
-    </div>
-        
-    <div style= "border-bottom:1px solid #032228; padding:10px;">
-        
-        <section id="contato">
-                <center><font size="6" style="color:#01a0c4"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contato: </b></font>
-                    <br /><br />
-
-                    <img src="img/home.png" width="auto" height="300px" style="float: right;">
-                    <img src="img/cel.png" width="auto" height="300px" style="float: left;">  
-                    <h2>    
-                        Telefone (19) 3232-1919<br />
-                        Whatsapp +55 (19) 99999-0001<br />
-                        Instagram: E-med Saúde a um clique<br />
-                        E-mail: e-med@saude.com.br<br />
-                        Ou se desejar:
-                    </h2>
-
-                    <br />
-      
-                <ul >
-                <li><a href="https://unisal.br/" target="_blank" style="padding-right: 30px;"><h3>Clique aqui para iniciar chat virtual</h3></a></li> &nbsp;
-                </ul>
-            </center>
-
-
-        </section>
-    </div>
-
-    <div style= "border-bottom:1px solid #032228; padding:10px;">
-        <section id="cadastro">
-
-            <center>
-                <font size="6" style="color:#01a0c4;"><b>Cadastre-se</b></font>
-
-                               <br /><br />
-                <form action="/formulario" method="post">
-
-                <div>
-                    <label for="nome">Nome:</label>
-                        <input type="text" id="nome" />
-                </div>
-
-                <div>
-                    <label for="email">E-mail:</label>
-                        <input type="email" id="email"/>
-                </div>
-
-                <div>
-                    <label for="cpf">CPF:</label>
-                        <input type="text" oninput="mascara(this)" id="cpf" maxlength="11" />
-                </div>
-
-                <div>
-                    <label for="data">Data Nascimento:</label>
-                        <input type="date" id="date"/>
-                </div>
-
-            <div class="sradio">
-                              
-                <label for="sexo">Sexo:</label>
-
-                    <!--<label for="masc">Masculino</label>
-                        <input type="radio" id="masc" name="sexo" value="masc" />
-                    <label for="fem">Feminino</label>                               
-                        <input type="radio" id="fem" name="sexo" value="fem" />
-                    <label for="pnd">Indefinido</label>        
-                        <input type="radio" id="pnd" name="sexo" value="pnd" />-->
-                            
-                        
-
-                         <select name="select">
-                            <option value="vazio"selected>
-                            ------------------------- SELECIONE -------------------------</option>
-                            <option value="fem">Feminino</option>
-                            <option value="masc">Masculino</option>
-                            <option value="pnd">Indefinido</option>
-                        </select> 
-            </div>
-
-                <div>
-                    <label for="usuario">Cadastre um nome de usuário:</label>
-                        <input type="usuario" name="usuario" id="usuario">
-                </div>
-
-                <div>
-                    <label for="senha">Cadastre uma senha:</label>
-                        <input type="password" id="password" />
-                </div>
-                <div class="button">
-                    <button type="submit" style="margin-left: 400px;">Finalizar</button>
-                </div>
-                </form>
-            </center>
-
-
-        </section>
-        
-    </div>
-
-</body>
-
-<footer>
-    <center>
-        <h5>
-            Desenvolvido por:<br />
-            Gabriel Contreras Marques<br />
-            João Felipe da Silva Godoi<br />
-            Nathália de Andrade Ribeiro Sampaio<br />
-            Stefano Sasso<br />
-            Tales Escher Massola
-        </h5>        
-    </center>
-</footer>
-
-</html>
+else {
+    if(tentativas == 3) { // Duplo igual para comparar, poderia ser == ou === o === compara tipo e valor, o == só compara valor. 
+        alert("Login inválido.");
+    } else {
+        alert("Login inválido. Tente novamente");
+    }    
+    tentativas++;
+}</script>
