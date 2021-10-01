@@ -1,26 +1,63 @@
-div{
-width: 100%;
-heigth: auto;
-}
 
 #banner
 {
 background-image: url(img/BG02.png);
 background-repeat: no-repeat;
 background-size:100%;
+height: auto;
+width: 100%;
+object-fit: cover;
+object-position: bottom;
+
+}
+#banner1
+{
+height: auto;
+width: 25%;
+object-fit: cover;
+object-position: bottom;
+}
+
+#menu{
+max-width: 100%; 
+display:block; 
+height: auto;
+width: 100%;
+object-fit: cover;
+object-position: bottom;
+
+}
+
+header{
+
+max-width: 100%; 
+display:block; 
+height: auto;
+width: 100%;
+object-fit: cover;
+object-position: bottom;
 }
 
 body {
 display: block;
 font-family: sans-serif;
 margin: -0.1px;
+max-width: 100%; 
 
 }
 
 #borda_texto{
 -webkit-text-stroke-width: 3px;
 -webkit-text-stroke-color:#01a0c4;
-font-size: 1.9em; color: #FFF;
+font-size: 3.5em; color: #FFF;
+max-width: 100%; 
+display:block; 
+height: auto;
+width: 100%;
+object-fit: cover;
+object-position: bottom;
+
+
 }
 
 .img1 { 
@@ -34,7 +71,7 @@ font-size: 1.9em; color: #FFF;
 #menu ul {
     margin: 0;
     padding:0;
-    /*font-size:20px;*/
+    font-size:1em;
     list-style:none;
 }
 
@@ -48,7 +85,7 @@ li {
     display: inline;
 }
 li a {
-    padding: 5px 10px; 
+    padding: 1px 1px; 
     margin:0;
     border: 0px solid rgb(255, 255, 255); 
     /*background: #01a0c4;*/
